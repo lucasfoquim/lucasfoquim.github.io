@@ -1,3 +1,45 @@
 body {
-    background-color: #b3b3b3;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fdfdfd;
+}
+
+/* ---- Section ---- */
+.projetos {
+  background: linear-gradient(to bottom right, #ffd6c0, #ffb6b6);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 1400px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.projetos h2 {
+  margin: 0 0 10px;
+}
+
+.projetos p {
+  margin: 0 0 25px;
+  color: #444;
+}
+
+/* ---- Cards container ---- */
+.cards-container {
+  display: flex;
+  justify-content: center; 
+  gap: 30px;               
+}
+
+/* ---- Card ---- */
+.card {
+  background-color: #f9a9b6;
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: 220px;            
+  text-align: left;
+}
+
+.card b {
+  display: block;
+  margin-bottom: 6px;
 }
