@@ -3,15 +3,21 @@ body {
   margin: 0;
   background-color: #fdfdfd;
 }
-
-/* ---- Section ---- */
 .projetos {
   background: linear-gradient(to bottom right, #ffd6c0, #ffb6b6);
+  height: 100vh;
   padding: 40px;
   border-radius: 10px;
   width: 100%;
   margin: 30px auto;
   text-align: left;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 .projetos h2 {
@@ -23,14 +29,14 @@ body {
   color: #444;
 }
 
-/* ---- Cards container ---- */
+
 .cards-container {
   display: flex;
   justify-content: center; 
   gap: 30px;               
 }
 
-/* ---- Card ---- */
+
 .card {
   background-color: #f9a9b6;
   border-radius: 12px;
@@ -43,3 +49,70 @@ body {
   display: block;
   margin-bottom: 6px;
 }
+
+.disciplina {
+  background: linear-gradient(to bottom right, #e334ec, #e334ec);
+  height: 100vh;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 30px auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 601px){
+  .disciplina{
+    flex-direction: row;
+    align-items: flex-start;
+  } 
+  .info{
+    padding-left: 2rem;
+  }
+}
+
+.hero{
+  width:100%;
+  height:100vh;
+  background-size: cover;
+  background-image: url("images/heroimage1.jpg");
+  background-position: center;
+  position: relative;
+}
+
+.hero-texto{
+  position: absolute;
+  top:40%;
+  text-align: center;
+  color: white;
+  font-size: 4vh;
+}
+
+.cta{
+  top:5%;
+  right:3%;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+.cta ul {
+  display: flex;
+  gap: 10px; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  padding: 10px 20px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  box-shadow: 2px 3px 3px lightgrey;
+}
+

@@ -170,3 +170,24 @@ h1 {
   }
 }
 
+header { grid-area: header; }
+.hero { grid-area: hero;}
+.main-content { grid-area: main;}
+.sidebar { grid-area: sidebar;}
+.extra { grid-area: extra;}
+.related-images { grid-area: related-images; }
+.related-posts { grid-area: related-posts;}
+footer { grid-area: footer;}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "hero main main"
+    "sidebar extra extra"
+    "related-images related-posts related-posts"
+    "footer footer footer";
+  padding: 10px;
+}
+
