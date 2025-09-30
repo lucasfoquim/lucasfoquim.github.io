@@ -3,22 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Barreiro</title>
-    
-        <style>
-            .fotografias{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .fotografias img {
-            width: 150px;
-            border-radius: 20px;
-        }
-
-        </style>
-
-
     </head>
     <body>
         <link rel="stylesheet" href="styles.css">
@@ -37,15 +21,14 @@
                 Nesta página encontra conteúdos multimédia
             </p>
 
-            <p>
+            <nav class="links">
                 <a href="#fotografias">Fotografias</a>
                 <a href="#video">Video</a>
                 <a href="#poema">Poema</a>
-            </p>
-
-
-            <section>
-                <h3>Fotografias</h3>
+            </nav>
+                
+            <section class="fotografia">
+                <h3 style="font-size:2vw">Fotografias</h3>
             <div class="fotografias">
                 <p id="fotografias"></p>
                 <img src="images/barreiro1.jpg">
@@ -60,13 +43,13 @@
             </div>
             </section>
 
-            <section>
-                   <h3>Video</h3>
-                   <div class="Video">
-                   <p id="video"></p>
+            <section class="videos">
+                   <h3 style="font-size:2vw">Video</h3>
                 <p>
                     Video da cidade do Barreiro:
                 </p>
+                   <div class="Video">
+                   <p id="video"></p>
 
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ydPuFSv2BMo?si=ri-P_fixPgL8rjP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -74,8 +57,8 @@
             </section>
  
 
-            <section>
-                   <h3>Poesia</h3>
+            <section class="poesia">
+                   <h3 style="font-size:2vw">Poesia</h3>
                     <div class="Poema">
                     <p id="poema"></p>
                  <p>
@@ -105,6 +88,15 @@
 
                     </div>
             </section>
+
+            <section class="pixbay">
+             <div class="container">  
+                <img src="images/pixbayimg.jpg">
+
+                 <div class="texto" style="font-size:2vw"> ababa</div>
+                 </div>
+            </section>
+
 
         </main>
         <footer>
