@@ -86,9 +86,10 @@ footer {
 .hero-texto{
   position: absolute;
   top:40%;
+  left:15%;
   text-align: center;
   color: white;
-  font-size: 4vh;
+  font-size: 3vh;
 }
 
 .cta{
