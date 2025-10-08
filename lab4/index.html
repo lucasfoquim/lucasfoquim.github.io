@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JS</title>
+     <script src="main.js"></script>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+    <h1>Olá!</h1>
+    <p>Esta é a minha página com diversos eventos</p>
+    <button onclick="saudar()">Saudação</button>
+    <button ondblclick="mensagemDuploClique()">Duplo Clique</button>
+    </div>
+
+    <div>
+        <h2>Conta!</h2>
+        <button onclick="count()">Conta</button>
+    </div>
+
+    <h3>Movimentos de Rato!</h3>
+
+    <div id="caixa"
+        onmouseover="entrarCaixa()" 
+        onmouseout="sairCaixa()" 
+        >
+        
+        Passa o rato aqui!
+    </div>
+
+</body> 
+</html>
