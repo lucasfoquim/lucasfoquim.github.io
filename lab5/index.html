@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    main{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:20px;
+
+        background-color: lightblue;
+    }
+
+    section {
+        width: 300px;
+        padding: 10px;
+        border-radius: 5px;
+        background: white;
+    }
+
+    #idPinta{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap:5px;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <main>
+       
+        <section id="idPassa">
+
+        <p>1. Passa por aqui!</p>
+
+        <script>
+           /* onclick, onmouseover, onmouseout, onkeyup, onkeydown, onchange,.. */
+
+           // Variáveis
+           const frase = document.querySelector("#idPassa p")
+
+           // Event handler (função manipuladora que trata do evento)
+
+           mudarFrase = (modo) => {
+            if (modo === 1){
+                frase.textContent = "1. Obrigado por passares!"
+            }else{
+                frase.textContent = "1. Passa por aqui"
+            }
+            
+           }
+
+           function reporFrase(){
+            frase.textContent = "1. Passa por aqui!"
+           }
+
+           //Event listener (associação de elementos a eventos)
+
+           frase.onmouseover = () => {mudarFrase(1)}
+           frase.onmouseout = () => {mudarFrase(2)}
+
+
+        </script>
+        
+        </section>
+
+
+        <section id="idPinta">
+ 
+            <p>2.Pinta-me</p>
+            <button onclick = "mudarCor('red')">Red</button>
+            <button>Green</button>
+            <button>Blue</button>
+
+
+            <script>
+
+            const botaoRed = document.querySelector("#idPinta button:nth-child(2)")
+            const botaoGreen = document.querySelector("#idPinta button:nth-child(3)")
+            const botaoBlue = document.querySelector("#idPinta button:nth-child(4)")
+            const paragrafo = document.querySelector("#idPinta p")
+
+            function mudarCor(cor){
+               paragrafo.style.color = cor;
+            }
+
+
+            botaoGreen.addEventListener('click', () => mudarCor('green'))
+            botaoBlue.onclick = () => mudarCor('blue')
+
+
+            </script>
+
+
+        </section>
+
+
+        <section id="idEscreve">
+
+            <label for="input">3. Experimenta escrever...</label>
+            <input id="input" type="text">
+
+            <script>
+
+                const input = document.querySelector("#idEscreve input")
+                const cores = ['red', 'green', 'blue']
+ 
+                let i = 0;
+                function colorir(){
+                    input.style.backgroundColor = cores[i];
+                    i++;
+                    if (i > 3){
+                        i = 0;
+                    }
+                }
+
+
+                input.onkeyup = colorir;
+
+            </script>
+
+
+        </section>
+
+
+        <section id="idEscolhe">
+
+            <input type="text" placeholder="escreve cor..">
+            <button>muda background</button>
+
+            <script>
+                 // A. Variaveis
+                const texto = document.querySelector("#idEscolhe input")
+                const botao = document.querySelector("#idEscolhe button")
+
+
+                // B. Event handler
+
+                function mudaBackground(){
+                    document.querySelector("body").style.background = texto.value; 
+                }
+
+
+                 // C. Event listener
+                botao.onclick = mudaBackground;
+
+            </script>
+
+        </section>
+    </main>
+</body>
+</html>
