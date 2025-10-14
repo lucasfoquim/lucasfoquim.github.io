@@ -34,6 +34,20 @@
         gap:5px;
     }
     
+    #idFormulario{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .linha.input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    gap: 10px;
+  }
+
 
     </style>
 </head>
@@ -135,29 +149,98 @@
 
 
         <section id="idEscolhe">
-
+            <p>
+                4.
             <input type="text" placeholder="escreve cor..">
-            <button>muda background</button>
+        <button type="button">muda background</button>
+            </p>
+         </section>
 
-            <script>
-                 // A. Variaveis
-                const texto = document.querySelector("#idEscolhe input")
-                const botao = document.querySelector("#idEscolhe button")
+        <script>
+        const texto = document.querySelector("#idEscolhe input");
+        const botao = document.querySelector("#idEscolhe button");
 
+  
+        function mudaBackground() {
+        const cor = texto.value.trim(); // remove espaços
+       document.body.style.backgroundColor = cor; // muda o fundo
+       }
 
-                // B. Event handler
+       botao.onclick = mudaBackground;
+       </script>
 
-                function mudaBackground(){
-                    document.querySelector("body").style.background = texto.value; 
-                }
+       <section id="idConta">
+    <p>
+      5. 
+      <button type="button" id="btnConta">Conta!</button>
+      <span id="contador">0</span>
+    </p>
+  </section>
 
+  <script>
+    // Espera o DOM carregar para garantir que os elementos existem
+    document.addEventListener("DOMContentLoaded", () => {
+      const botao = document.getElementById("btnConta");
+      const contador = document.getElementById("contador");
+      let valor = 0;
 
-                 // C. Event listener
-                botao.onclick = mudaBackground;
+      function aumentaContador() {
+        valor++;
+        contador.textContent = valor;
+      }
 
-            </script>
+      botao.addEventListener("click", aumentaContador);
+    });
+  </script>
 
-        </section>
+        <section id="idFormulario">
+
+    <form id="formulario">
+    <p>6.
+    </p>
+    <div id="linha.input">
+    <input id="nome" type="text" placeholder="Insira o seu nome" required>
+    <input id="idade" type="number" placeholder="Insira a sua idade" required>
+    </div>
+    <input type="submit" value="Submit">
+    </form>
+
+  <p id="mensagem"></p>
+
+    <script>
+      // Captura o formulário
+      document.querySelector('#formulario').onsubmit = (e) => {
+      e.preventDefault(); // Impede recarregamento da página
+
+       // Obtém os valores dos inputs
+       const nome = document.querySelector('#nome').value.trim();
+       const idade = document.querySelector('#idade').value.trim();
+
+      // Mostra a mensagem formatada
+      document.querySelector('#mensagem').textContent = `Olá, o ${nome} tem ${idade}!`;
+    };
+    </script>
+    </section>
+     <section id="idAutoConta">
+    <p>
+    7. Automatic counter:
+    <span id="contadorAuto">0</span>
+    </p>
+    </section>
+
+    <script>
+     // A. Variável do contador
+     let valor = 0;
+
+     // B. Função chamada a cada 1 segundo
+     function count() {
+     valor++;
+     document.getElementById("contadorAuto").textContent = valor;
+     }
+
+     // C. Inicia o contador automático (1 segundo = 1000 ms)
+    setInterval(count, 1000);
+     </script>
     </main>
 </body>
 </html>
